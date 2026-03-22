@@ -1,0 +1,328 @@
+:root {
+  --navy: #0d1b2a;
+  --navy-mid: #1b2e42;
+  --navy-light: #243447;
+  --champagne: #c9a84c;
+  --champagne-lt: #e8c97a;
+  --ivory: #f5f0e8;
+  --ivory-card: #fffdf8;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --header-height: 72px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--ivory);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* ── Header ── */
+.header-banner {
+  background: linear-gradient(90deg, var(--navy) 0%, var(--navy-mid) 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  height: var(--header-height);
+  z-index: 1030;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.container-fluid > .row {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  background: var(--navy-mid);
+  border-right: 1px solid rgba(201, 168, 76, 0.15);
+  z-index: 100;
+}
+
+.sidebar-sticky {
+  padding-top: 1.25rem;
+}
+
+.main-content {
+  margin-left: 16.6667%;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .main-content {
+    margin-left: 25%;
+  }
+}
+
+/* ── Logo ── */
+.logo-text {
+  color: var(--champagne);
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.sub-logo {
+  color: rgba(201, 168, 76, 0.6);
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ── Sidebar Nav ── */
+.sidebar .nav-link {
+  color: rgba(245, 240, 232, 0.7);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 11px 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0 8px;
+  transition: all 0.25s ease;
+}
+
+.sidebar .nav-link:hover {
+  color: var(--champagne);
+  background-color: var(--navy-light);
+}
+
+/* ── Icons — refined monochrome gold tones ── */
+.icon-wrap {
+  width: 38px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.home-icon {
+  color: var(--champagne-lt);
+}
+.about-icon {
+  color: #a8c4d4;
+} /* soft steel blue  */
+.skills-icon {
+  color: var(--champagne);
+}
+.portfolio-icon {
+  color: #8fb8c8;
+} /* muted teal       */
+.contact-icon {
+  color: #b0a898;
+} /* warm greige      */
+
+/* ── Hero Card ── */
+.hero-card {
+  background: var(--navy);
+  background-image: radial-gradient(
+      rgba(201, 168, 76, 0.06) 15%,
+      transparent 16%
+    ),
+    linear-gradient(135deg, #0d1b2a 0%, #1b3052 60%, #0d1b2a 100%);
+  background-size: 18px 18px, 100% 100%;
+  border-radius: 24px;
+  color: white;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 24px 48px rgba(13, 27, 42, 0.45);
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 76, 0.18);
+}
+
+.hero-title {
+  color: var(--champagne);
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 16px rgba(201, 168, 76, 0.3);
+}
+
+.welcome-text {
+  font-size: 1.05rem;
+  opacity: 0.75;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: rgba(245, 240, 232, 0.75);
+}
+
+/* ── Profile Image ── */
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 4px solid var(--champagne);
+  box-shadow: 0 8px 28px rgba(13, 27, 42, 0.2),
+    0 0 0 8px rgba(201, 168, 76, 0.1);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ── Utility ── */
+.color-purple {
+  color: var(--navy);
+}
+.bg-purple {
+  background-color: var(--navy);
+}
+
+/* About / card backgrounds */
+#about .bg-white,
+.skill-card.bg-white,
+.portfolio-item.bg-white {
+  background-color: var(--ivory-card) !important;
+  border: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+#about h3 {
+  color: var(--navy) !important;
+}
+
+/* ── Skills ── */
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(13, 27, 42, 0.12) !important;
+}
+
+/* icon colors inside skill cards */
+.skill-card .text-danger {
+  color: var(--champagne) !important;
+}
+.skill-card .text-primary {
+  color: #4a7fa5 !important;
+}
+.skill-card .text-warning {
+  color: var(--champagne-lt) !important;
+}
+
+/* ── Portfolio ── */
+.portfolio-item img {
+  transition: transform 0.45s ease;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.badge.bg-purple {
+  background-color: var(--navy) !important;
+  color: var(--champagne);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ── Contact ── */
+.contact-box {
+  background: linear-gradient(
+    135deg,
+    var(--navy) 0%,
+    #1b3052 50%,
+    #0d1b2a 100%
+  );
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.contact-box .btn-light {
+  background: var(--champagne);
+  color: var(--navy);
+  border: none;
+  font-weight: 600;
+}
+
+.contact-box .btn-light:hover {
+  background: var(--champagne-lt);
+}
+
+.contact-box .btn-outline-light {
+  border-color: rgba(201, 168, 76, 0.5);
+  color: var(--champagne-lt);
+}
+
+.contact-box .btn-outline-light:hover {
+  background: rgba(201, 168, 76, 0.12);
+  color: var(--champagne);
+  border-color: var(--champagne);
+}
+
+/* ── Mobile Dropdown ── */
+.mobile-nav-dropdown {
+  background: var(--navy-mid);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 14px;
+  padding: 8px;
+  min-width: 220px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  margin-top: 6px;
+}
+
+.mobile-nav-dropdown .dropdown-item {
+  color: rgba(245, 240, 232, 0.85);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.mobile-nav-dropdown .dropdown-item:hover,
+.mobile-nav-dropdown .dropdown-item:focus {
+  background: var(--navy-light);
+  color: var(--champagne);
+}
+
+.mobile-nav-dropdown .icon-wrap {
+  background: rgba(201, 168, 76, 0.1);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+/* ── Mobile ── */
+@media (max-width: 767.98px) {
+  .main-content {
+    margin-left: 0 !important;
+    padding: 16px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+  .logo-text {
+    font-size: 1.6rem;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
+}
